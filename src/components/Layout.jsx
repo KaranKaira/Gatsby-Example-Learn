@@ -1,17 +1,15 @@
-import React from 'react'
-import Navbar from './Navbar';
-import '../styles/global.css';
+import React from "react"
+import Navbar from "./Navbar"
+import "../styles/global.css"
 
-export default function Layout({children}) {
-    return (
-        <div className='layout'>
-            <Navbar />
-            <div className="content">
-                {children}
-            </div>
-            <footer>
-                <p>Made by Karan</p>
-            </footer>
-        </div>
-    )
+export default function Layout({ children }) {
+  return (
+    <div className="layout">
+      <Navbar />
+      <div className="content">{children}</div>
+      <footer>
+        <p>Made by Karan</p>
+      </footer>
+    </div>
+  )
 }

@@ -4,7 +4,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 export default function Navbar() {
   //! query from the component
   //! we cannot use query variabels in these queries
-  //! can we used once
+  //! can be used once
   const data = useStaticQuery(graphql`
     query SiteInfo {
       site {
@@ -14,10 +14,10 @@ export default function Navbar() {
       }
     }
   `)
-    const {title} = data.site.siteMetadata;
+  const { title } = data.site.siteMetadata
   return (
     <nav>
-      <h1>{title}</h1>
+     <Link to = '/'><h1>{title}</h1></Link> 
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
